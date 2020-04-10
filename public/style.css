@@ -23,7 +23,7 @@ body, html{
 
 #dark {
     z-index: 1;
-    opacity: 0.94;
+    opacity: 0.95;
 }
 
 .fade {
@@ -42,5 +42,5 @@ body:after {
     left: 0;
     bottom: 0;
     right: 0;
-    background: radial-gradient(ellipse at center, transparent 60%, black 95%);
+    background: radial-gradient(ellipse at center, transparent 10%, black 95%);
 }
