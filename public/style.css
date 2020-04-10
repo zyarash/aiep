@@ -1,0 +1,35 @@
+body, html{
+    background-image: url("background.png");
+    background-position: center 32%;
+    background-repeat: no-repeat;
+    height: 100%;
+    display: grid;
+    font-family: 'Girassol', cursive;
+    overflow: hidden;
+}
+
+#countdown {
+    margin: auto;
+    letter-spacing: 10px;
+    font-size: 2em;
+    color: #fff;
+}
+
+#fade {
+   background-color: #000;
+   position: absolute;
+   width: 150%;
+   height: 150%;
+   left: -10%;
+   top: -10%;
+}
+
+body:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background: radial-gradient(circle, transparent 10%, black 100%)
+}
