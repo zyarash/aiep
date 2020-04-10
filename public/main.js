@@ -15,11 +15,6 @@ setInterval(function() {
   	`${days}days ${hours}hours ${minutes}minutes ${seconds}seconds`
     );
 
-    $("#fade").fadeOut(3000)
+    $("#fade").fadeOut(3000);
 
 }, 1000)
-
-
-$(document).ready(function() {
-    $("html").fadeIn();
-});
