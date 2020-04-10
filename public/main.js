@@ -1,5 +1,15 @@
 const end = new Date(2020, 3, 24, 0, 0, 0);
 
+
+function pad(num) {
+    var s = num+"";
+    if (num < 10) {
+        return "0" + s
+    }
+    return s;
+}
+
+
 setInterval(function() {
 
     var now = new Date().getTime();
@@ -12,7 +22,7 @@ setInterval(function() {
 
     var countdown = $("#countdown");
     countdown.text(
-  	`${days}days ${hours}hours ${minutes}minutes ${seconds}seconds`
+  	`${pad(days)}days ${pad(hours)}hours ${pad(minutes)}minutes ${pad(seconds)}seconds`
     );
 
     $("#fade").fadeOut(3000);
