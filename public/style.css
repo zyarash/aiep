@@ -1,11 +1,18 @@
 body, html{
-    background-image: url("background.png");
-    background-position: center 32%;
-    background-repeat: no-repeat;
     height: 100%;
     display: grid;
     font-family: 'Girassol', cursive;
     overflow: hidden;
+    position: relative;
+    margin: 0;
+    padding: 0;
+}
+
+main {
+    background-image: url("background.png");
+    background-position: center 32%;
+    background-repeat: no-repeat;
+    display: grid;
 }
 
 #countdown {
@@ -39,12 +46,35 @@ body, html{
     top: -10%;
 }
 
-body:after {
-    content: '';
+
+#gradient-static {
+    z-index:2;
     position: absolute;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
-    background: radial-gradient(ellipse at center, transparent 10%, black 95%);
+    width:100%;
+    height: 100%;
+    background: radial-gradient(ellipse at center, transparent 5%, black 80%);
+    opacity: 1;
+}
+
+#gradient-ease {
+    position: absolute;
+    width:100%;
+    height: 100%;
+    background: radial-gradient(ellipse at center, transparent 5%, black 60%);
+    opacity: 0;
+    animation: pulse 2s ease-in-out infinite alternate;
+}
+
+@keyframes pulse {
+    0% { opacity: 0; }
+    100%{ opacity:1; }
+}
+
+#static {
+    z-index:1;
+    position:absolute;
+    width:100%;
+    height:100%;
+    background-image: url("static.gif");
+    opacity: 0.01;
 }
