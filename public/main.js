@@ -33,16 +33,12 @@ setInterval(function() {
 $(document).ready(function() {
     $(".audio").click(function() {
         audioElement = $("#noise").get(0);
-        console.log(audioElement.paused);
-    
         if (audioElement.paused) {
-    	console.log(audioElement.paused);
-    	audioElement.play();
+    	    audioElement.play();
             $(".audio").css("background-image", "url(unmute.svg)");
         }
         else {
-    	console.log(audioElement.paused);
-    	audioElement.pause();
+    	    audioElement.pause();
             $(".audio").css("background-image", "url(mute.svg)");
         }
     });
