@@ -2,11 +2,16 @@ extends layout
 
 block content
     main
+        div#prompt.fade
         div#fade.fade
         div#dark.fade
         div#gradient-ease
         div#gradient-static
         div#static
+        div#question-box
+            div#question Go to sleep?
+            div#yes.choice Yes
+            div#no.choice No
         div#countdown
         div.audio
     audio(loop preload="auto" id="noise")

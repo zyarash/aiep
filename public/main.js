@@ -22,23 +22,37 @@ setInterval(function() {
 
     var countdown = $("#countdown");
     countdown.text(
-  	`${pad(days)}days ${pad(hours)}hours ${pad(minutes)}minutes ${pad(seconds)}seconds`
+        `${pad(days)}days ${pad(hours)}hours ${pad(minutes)}minutes ${pad(seconds)}seconds`
     );
-
-    $("#fade").fadeOut(3000);
 
 }, 1000);
 
 
 $(document).ready(function() {
+    $("#prompt").fadeOut(3000);
+
+    $("#no").click(function() {
+        $("#prompt").fadeIn(3000);
+        $("#prompt").fadeOut(3000);
+    });
+
+    $("#yes").click(function() {
+        $("#prompt").fadeOut(3000);
+        $("#question-box").fadeOut(3000);
+        $("#fade").fadeOut(3000);
+        audioElement = $("#noise").get(0);
+        audioElement.play();
+    });
+
+
     $(".audio").click(function() {
         audioElement = $("#noise").get(0);
         if (audioElement.paused) {
-    	    audioElement.play();
+            audioElement.play();
             $(".audio").css("background-image", "url(unmute.svg)");
         }
         else {
-    	    audioElement.pause();
+            audioElement.pause();
             $(".audio").css("background-image", "url(mute.svg)");
         }
     });

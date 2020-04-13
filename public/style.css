@@ -26,6 +26,41 @@ main {
     user-select: none;
     text-align: center;
     word-wrap: break-word;
+    display: inline-block;
+}
+
+#question {
+    z-index: 10;
+    margin: auto;
+    letter-spacing: 5px;
+    font-size: 2em;
+    color: #fff;
+    user-select: none;
+    text-align: center;
+}
+
+#question-box {
+    display: block;
+    justify-items: center;
+    margin: 0 auto;
+    z-index:10;
+    margin-top:30%;
+}
+
+.choice {
+    z-index: 10;
+    color: #fff;
+    width: 100px;
+    height: 50px;
+    justify-items: center;
+    text-align: center;
+    user-select: none;
+    display:inline-block;
+    margin-top: 20px;
+}
+
+.choice:hover {
+    color: #ddd;
 }
 
 #fade {
@@ -39,6 +74,12 @@ main {
     overflow: hidden;
 }
 
+#prompt {
+    z-index: 11;
+    opacity: 1;
+    overflow: hidden;
+}
+
 .fade {
     background-color: #000;
     position: absolute;
@@ -47,7 +88,6 @@ main {
     left: -10%;
     top: -10%;
 }
-
 
 #gradient-static {
     z-index:2;
