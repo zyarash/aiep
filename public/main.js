@@ -28,3 +28,8 @@ setInterval(function() {
     $("#fade").fadeOut(3000);
 
 }, 1000);
+
+
+setInterval(function() {
+    $("#noise").trigger("play");
+}, 500);
