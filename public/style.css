@@ -96,11 +96,11 @@ main {
     filter: invert(27%) brightness(0.5);
 }
 
-@media only screen and (max-width: 600px) {
+/*@media only screen and (max-width: 600px) {
     #dark {
         opacity: 0.75;
     }
-}
+}*/
 
 @media only screen and (max-width: 991px) {
     main {
