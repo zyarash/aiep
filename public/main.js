@@ -30,6 +30,20 @@ setInterval(function() {
 }, 1000);
 
 
-setInterval(function() {
-    $("#noise").trigger("play");
-}, 500);
+$(document).ready(function() {
+    $(".audio").click(function() {
+        audioElement = $("#noise").get(0);
+        console.log(audioElement.paused);
+    
+        if (audioElement.paused) {
+    	console.log(audioElement.paused);
+    	audioElement.play();
+            $(".audio").css("background-image", "url(unmute.svg)");
+        }
+        else {
+    	console.log(audioElement.paused);
+    	audioElement.pause();
+            $(".audio").css("background-image", "url(mute.svg)");
+        }
+    });
+});

@@ -10,9 +10,10 @@ body, html{
 
 main {
     background-image: url("background.png");
-    background-position: center 25%;
+    background-position: center 2em;
     background-repeat: no-repeat;
     display: grid;
+    background-size:cover;
 }
 
 #countdown {
@@ -77,4 +78,25 @@ main {
     height:100%;
     background-image: url("static.gif");
     opacity: 0.02;
+}
+
+.audio {
+    position:absolute;
+    bottom: 10px;
+    left: 10px;
+    background-image: url("mute.svg");
+    width: 2em;
+    height: 2em;
+    filter: invert(27%) brightness(0.3);
+    z-index: 2;
+}
+
+.audio:hover {
+    filter: invert(27%) brightness(0.5);
+}
+
+@media only screen and (max-width: 600px) {
+    #dark {
+        opacity: 0.75;
+    }
 }
