@@ -33,14 +33,19 @@ $(document).ready(function() {
 
     $("#no").click(function() {
         $("#prompt").fadeIn(3000);
-        $("#prompt").fadeOut(3000);
+        setTimeout(function() {
+            $("#prompt").fadeOut(3000);
+        }, 4500);
     });
 
     $("#yes").click(function() {
+        $("#prompt").fadeIn(3000);
         $("#prompt").fadeOut(3000);
         $("#question-box").fadeOut(3000);
-        $("#fade").fadeOut(3000);
-        audioElement = $("#noise").get(0);
-        audioElement.play();
+        setTimeout(function() {
+            audioElement = $("#noise").get(0);
+            audioElement.play();
+            $("#fade").fadeOut(3000);
+        }, 4500);
     });
 });
