@@ -43,17 +43,4 @@ $(document).ready(function() {
         audioElement = $("#noise").get(0);
         audioElement.play();
     });
-
-
-    $(".audio").click(function() {
-        audioElement = $("#noise").get(0);
-        if (audioElement.paused) {
-            audioElement.play();
-            $(".audio").css("background-image", "url(unmute.svg)");
-        }
-        else {
-            audioElement.pause();
-            $(".audio").css("background-image", "url(mute.svg)");
-        }
-    });
 });

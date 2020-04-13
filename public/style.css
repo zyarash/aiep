@@ -13,8 +13,10 @@ main {
     background-image: url("background.png");
     background-position: center;
     background-repeat: no-repeat;
-    display: grid;
+    display: flex;
     background-size:contain;
+    justify-content: center;
+    align-items: center;
 }
 
 #countdown {
@@ -44,7 +46,7 @@ main {
     justify-items: center;
     margin: 0 auto;
     z-index:10;
-    margin-top:30%;
+    position: absolute;
 }
 
 .choice {
@@ -121,21 +123,6 @@ main {
     opacity: 0.02;
 }
 
-.audio {
-    position:absolute;
-    bottom: 20px;
-    left: 20px;
-    background-image: url("mute.svg");
-    width: 2em;
-    height: 2em;
-    filter: invert(27%) brightness(0.7);
-    z-index: 2;
-}
-
-.audio:hover {
-    filter: invert(27%) brightness(0.5);
-}
-
 @media only screen and (max-width: 600px) {
     #dark {
         opacity: 0.85;
@@ -144,6 +131,6 @@ main {
 
 @media only screen and (max-width: 991px) {
     main {
-	background-size: cover;
+        background-size: cover;
     }
 }
