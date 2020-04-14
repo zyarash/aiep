@@ -41,14 +41,13 @@ $(document).ready(function() {
     $("#yes").click(function() {
         $("#prompt").fadeIn(3000);
         $("#question-box").fadeOut(3000);
+        audioElement = $("#noise").get(0);
+        audioElement.play();
+        audioElement.volume = 0;
+        $("#noise").animate({volume: 1}, 2000);
         setTimeout(function() {
-            audioElement = $("#noise").get(0);
-            audioElement.play();
-            audioElement.volume = 0;
-            $("#noise").animate({volume: 1}, 1000);
-
             $("#prompt").fadeOut(3000);
             $("#fade").fadeOut(3000);
-        }, 4500);
+        }, 5000);
     });
 });
