@@ -32,6 +32,13 @@ $(document).ready(function() {
     const soundEffect = new Audio();
     soundEffect.play();
 
+    audioElement = $("#noise").get(0);
+    audioElement.play();
+    audioElement.pause();
+    audioElement.muted = false;
+    audioElement.volume = 0;
+    audioElement.currentTime = 0;
+
     $("#prompt").fadeOut(3000);
 
     $("#no").click(function() {
