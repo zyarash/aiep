@@ -29,6 +29,9 @@ setInterval(function() {
 
 
 $(document).ready(function() {
+    const soundEffect = new Audio();
+    soundEffect.play();
+
     $("#prompt").fadeOut(3000);
 
     $("#no").click(function() {
