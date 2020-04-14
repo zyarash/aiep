@@ -30,7 +30,10 @@ setInterval(function() {
 
 $(document).ready(function() {
     audioElement = $("#noise").get(0);
+    audioElement.volume = 0;
     audioElement.play();
+    audioElement.pause();
+    audioElement.currentTime = 0;
 
     $("#prompt").fadeOut(3000);
 
