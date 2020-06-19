@@ -13,7 +13,7 @@ const path = require("path")
 
 
 const app = express()
-const port = process.env.PORT || "8000";
+const port = process.env.PORT || "8004";
 
 
 app.set("views", path.join(__dirname, "views"));
@@ -24,7 +24,7 @@ app.use(express.static(path.join(__dirname, "public")));
 
 
 app.get("/", (request, response) => {
-    var end = new Date(Date.UTC(2020, 3, 19, 19, 55, 0));
+    var end = new Date(Date.UTC(2020, 6, 19, 19, 55, 0));
     var now = new Date().getTime();
 
     if ((end - now) < 1) {

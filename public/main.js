@@ -1,5 +1,5 @@
-var end = new Date(Date.UTC(2020, 3, 19, 19, 55, 0));
-console.log(end);
+var end = new Date(Date.UTC(2020, 6, 19, 19, 55, 0));
+
 
 function pad(num) {
     var s = num+"";
