@@ -1,4 +1,5 @@
-var end = new Date(Date.UTC(2020, 6, 19, 19, 55, 0));
+var end = new Date().getTime() + (1 * 60000) + (1 * 30000);
+end = end + (1 * 30000);
 
 
 function pad(num) {
